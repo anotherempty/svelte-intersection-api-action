@@ -1,0 +1,22 @@
+{
+  "name": "svelte-observer-action",
+  "version": "0.0.1",
+  "description": "A Svelte action to easily use the Intersection Observer API",
+  "main": "src/index.js",
+  "keywords": [
+    "svelte",
+    "svelte-action",
+    "Intersection",
+    "Observer",
+    "API"
+  ],
+  "author": {
+    "name": "anotherempty",
+    "url": "https://github.com/anotherempty"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anotherempty/svelte-observer-action.git"
+  },
+  "license": "MIT"
+}
