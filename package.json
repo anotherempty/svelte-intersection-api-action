@@ -18,5 +18,9 @@
     "type": "git",
     "url": "https://github.com/anotherempty/svelte-observer-action.git"
   },
+  "homepage": "https://anotherempty.github.io/svelte-observer-action/",
+  "bugs": {
+    "url": "https://github.com/anotherempty/svelte-observer-action/issues"
+  },
   "license": "MIT"
 }
