@@ -2,19 +2,19 @@
 
 Easily integrate the Intersection Observer API in Svelte
 
-<a href="https://anotherempty.github.io/svelte-intersection-observer"> See the demo</a>
+<a href="https://anotherempty.github.io/svelte-intersection-api-action"> See the demo</a>
 
 ## Installation
 
 ```sh
-npm install svelte-intersection-observer
+npm install svelte-intersection-api-action
 ```
 
 ## Usage
 
 ```svelte
 <script>
-  import { observer } from "svelte-intersection-observer";
+  import { observer } from "svelte-intersection-api-action";
 
 </script>
 
