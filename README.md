@@ -7,18 +7,18 @@ Easily integrate the Intersection Observer API in Svelte
 ## Installation
 
 ```sh
-npm install svelte-observer-action
+npm install svelte-intersection-observer
 ```
 
 ## Usage
 
 ```svelte
 <script>
-  import { observer } from "svelte-observer-action";
+  import { observer } from "svelte-intersection-observer";
 
 </script>
 
-<div use:observer={{ options }} on:crossed={(e)=>doSomething(e.detail)}>
+<div use:intersectionAPI={{ options }} on:crossed={(e)=>doSomething(e.detail)}>
 </div>
 ```
 

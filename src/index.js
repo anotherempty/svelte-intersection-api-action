@@ -4,7 +4,7 @@ const handle = (entries, node) => {
   });
 };
 
-export function observer(node, options = {}) {
+export function intersectionAPI(node, options = {}) {
   const observer = new IntersectionObserver(
     (entries) => handle(entries, node),
     options
