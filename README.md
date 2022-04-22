@@ -14,7 +14,7 @@ npm install svelte-intersection-api-action
 
 ```svelte
 <script>
-  import { observer } from "svelte-intersection-api-action";
+  import { intersectionAPI } from "svelte-intersection-api-action";
 
 </script>
 
