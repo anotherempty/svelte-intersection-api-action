@@ -1,6 +1,6 @@
 {
   "name": "svelte-intersection-api-action",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A Svelte action to easily integrate the Intersection Observer API",
   "main": "src/index.js",
   "keywords": [
