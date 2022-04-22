@@ -1,4 +1,4 @@
-# Svelte Observer Action
+# Svelte Intersection Observer Action
 
 Easily integrate the Intersection Observer API in Svelte
 
