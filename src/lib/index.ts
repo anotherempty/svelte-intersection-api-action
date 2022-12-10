@@ -4,15 +4,21 @@ export type IntersectionObserverOptions = {
 	threshold?: number | number[];
 };
 
-const handle = (entries: Array<IntersectionObserverEntry>, node: Element) => {
-	entries.forEach((entry) => {
-		node.dispatchEvent(new CustomEvent('crossed', { detail: entry }));
-	});
-};
-
 export function intersectionAPI(node: Element, options: IntersectionObserverOptions = {}) {
-	const observer = new IntersectionObserver((entries) => handle(entries, node), options);
+	const observer = new IntersectionObserver(handleIntersection, options);
 	observer.observe(node);
+
+	function handleIntersection(entries: Array<IntersectionObserverEntry>) {
+		entries.forEach((entry) => {
+			node.dispatchEvent(
+				new CustomEvent('crossed', { detail: { entry, unobserve } })
+			);
+		});
+	}
+
+	function unobserve() {
+		observer.unobserve(node);
+	}
 
 	return {
 		destroy() {
