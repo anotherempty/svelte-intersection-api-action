@@ -1,38 +1,37 @@
-# create-svelte
+# Svelte Intersection Observer Action
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Easily integrate the Intersection Observer API in Svelte
 
-## Creating a project
+<a href="https://anotherempty.github.io/svelte-intersection-api-action"> See the demo</a>
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Installation
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+```sh
+npm install svelte-intersection-api-action
 ```
 
-## Developing
+## Usage
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```svelte
+<script lang="ts">
+  import { intersectionAPI, type IntersectionObserverOptions } from "svelte-intersection-api-action";
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+  let options: IntersectionObserverOptions = {
+    root: undefined,
+    rootMargin: "20px",
+    threshold: [0, 0.5, 1],
+  }
+</script>
+<div use:intersectionAPI={ options } on:crossed={(e)=>doSomething(e.detail)}>
+</div>
 ```
 
-## Building
+## Props
 
-To create a production version of your app:
+`options` : The options used by the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 
-```bash
-npm run build
-```
+`e.detail` : An [IntersectionObserverEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry), is dispatched when a threshold is crossed
 
-You can preview the production build with `npm run preview`.
+## License
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Distributed under the MIT License. 
